@@ -48,6 +48,30 @@ makepkg -si
 
 ---
 
+## 🔌 Optional Dependencies & Extras
+
+Core dependencies are installed automatically during setup. However, certain advanced features in `gallery-dl` and `yt-dlp` require optional Python packages or system tools:
+
+* **SOCKS Proxy Support:** `PySocks` (Required if using `--proxy socks5://...` with `gallery-dl` or `yt-dlp`).
+* **Brotli / Zstandard Compression:** `brotli`, `zstandard` (Accelerates HTTP request decompression).
+* **Extended Config Formats:** `PyYAML`, `toml`, `jinja2` (For custom templates and configuration files).
+* **System Certificate Store:** `truststore` (Uses native OS trust stores for HTTPS).
+* **Pixiv Ugoira / Animation Encoding:** `ffmpeg`, `mkvtoolnix` (Converts animated Ugoira frames into video/GIFs).
+
+### Installing Extras into the Media-DL Virtual Environment
+
+If you need SOCKS proxy support or other extras, you can install them into the application's virtual environment:
+
+```bash
+# System-wide installation:
+sudo /opt/media-dl/venv/bin/pip install PySocks brotli zstandard
+
+# Per-user installation:
+~/.local/share/media-dl/venv/bin/pip install PySocks brotli zstandard
+```
+
+---
+
 ## 🛠️ Building Packages from Source
 
 To compile Debian, RPM, or generic release packages locally from source code, run the build script:
