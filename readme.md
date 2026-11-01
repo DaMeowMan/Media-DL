@@ -101,3 +101,9 @@ To clean or rebuild the virtual environment:
 * **Display Server:** Requires a graphical session (X11 or XWayland; pure Wayland is untested).
 * **Network:** Active internet connection is required at install time to download Python dependencies.
 * **Impersonation Support:** `curl_cffi` is required for impersonation targets (supported on standard `x86_64` and `aarch64` Linux systems).
+
+---
+
+## 🎨 Credits & Attribution
+
+* Application desktop icon created by [Uniconlabs](https://www.flaticon.com/authors/uniconlabs) - [Flaticon](https://www.flaticon.com/free-icon/download_6711359).
