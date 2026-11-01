@@ -1,0 +1,10 @@
+#!/bin/sh
+# Upgrade yt-dlp, gallery-dl and friends inside the media-dl venv.
+# usage: media-dl-update      (use sudo for system-wide installs)
+set -e
+VENV="@VENV@"
+UV="$(command -v uv || true)"
+[ -n "$UV" ] || UV="$VENV/bin/uv"
+[ -x "$UV" ] || { echo "uv not found; reinstall media-dl" >&2; exit 1; }
+UV_LINK_MODE=copy "$UV" pip install --python "$VENV/bin/python" -U \
+    "yt-dlp[default,curl-cffi,secretstorage]" gallery-dl python-mpv mutagen

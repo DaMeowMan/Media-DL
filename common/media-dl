@@ -1,0 +1,3 @@
+#!/bin/sh
+# media-dl launcher (media_dl.py re-execs itself into the venv python)
+exec python3 "@LIBDIR@/media_dl.py" "$@"

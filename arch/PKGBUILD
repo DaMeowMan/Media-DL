@@ -1,0 +1,22 @@
+# Maintainer: @MAINTAINER@
+pkgname=media-dl
+pkgver=@VERSION@
+pkgrel=1
+pkgdesc='Tk front-end for yt-dlp (videos) and gallery-dl (images)'
+arch=('any')
+url='@URL@'
+license=('@LICENSE@')
+depends=('python' 'tk' 'python-pillow' 'python-pip' 'uv' 'curl' 'ca-certificates'
+         'ffmpeg' 'atomicparsley' 'aria2' 'mpv')
+optdepends=('deno: preferred JavaScript runtime for YouTube (yt-dlp-ejs)'
+            'nodejs: alternative JavaScript runtime (node >= 22)'
+            'rtmpdump: RTMP downloads'
+            'python-secretstorage: keyring access for --cookies-from-browser')
+install=media-dl.install
+source=("media-dl-$pkgver.tar.gz")
+sha256sums=('SKIP')
+
+package() {
+    cd "$srcdir/media-dl-$pkgver"
+    cp -a usr "$pkgdir/"
+}

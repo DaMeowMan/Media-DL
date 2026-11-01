@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Media-DL
+GenericName=Media Downloader
+Comment=Download videos (yt-dlp) and images (gallery-dl)
+Exec=@BINDIR@/media-dl
+Icon=media-dl
+Terminal=false
+StartupNotify=true
+Categories=AudioVideo;Audio;Video;
+Keywords=yt-dlp;gallery-dl;youtube;download;video;image;

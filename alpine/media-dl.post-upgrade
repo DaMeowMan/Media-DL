@@ -1,0 +1,3 @@
+#!/bin/sh
+/usr/lib/media-dl/media-dl-setup
+exit 0

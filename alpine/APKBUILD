@@ -1,0 +1,22 @@
+# Maintainer: @MAINTAINER@
+# EXPERIMENTAL: Alpine uses musl; PyPI wheels (curl_cffi etc.) may be missing.
+pkgname=media-dl
+pkgver=@VERSION@
+pkgrel=0
+pkgdesc="Tk front-end for yt-dlp (videos) and gallery-dl (images)"
+url="@URL@"
+arch="noarch"
+license="@LICENSE@"
+depends="python3 py3-tkinter py3-pillow py3-pip uv curl ca-certificates ffmpeg
+	atomicparsley aria2 mpv mpv-libs"
+install="$pkgname.post-install $pkgname.post-upgrade $pkgname.pre-deinstall"
+source="media-dl-$pkgver.tar.gz"
+builddir="$srcdir/media-dl-$pkgver"
+options="!check"
+
+package() {
+	cd "$builddir"
+	cp -a usr "$pkgdir"/
+}
+
+sha512sums=""

@@ -1,0 +1,14 @@
+Package: media-dl
+Version: @VERSION@
+Section: video
+Priority: optional
+Architecture: all
+Maintainer: @MAINTAINER@
+Depends: python3 (>= 3.9), python3-tk, python3-venv, python3-pip, python3-pil, python3-pil.imagetk, curl, ca-certificates, ffmpeg, atomicparsley, aria2, mpv, libmpv2 | libmpv1
+Recommends: uv, rtmpdump, nodejs, quickjs, python3-brotli, python3-pycryptodome, python3-xattr, python3-secretstorage
+Homepage: @URL@
+Description: Tk front-end for yt-dlp and gallery-dl
+ Downloads videos with yt-dlp and images with gallery-dl, with an embedded
+ mpv player, image/thumbnail preview and a yt-dlp extractor picker.
+ yt-dlp, gallery-dl, python-mpv, mutagen etc. live in a venv at
+ /opt/media-dl/venv that is built with uv when the package is configured.
